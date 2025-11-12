@@ -58,19 +58,19 @@ function exibirImagens() {
 
     for (let i = 0; i < imagensPorTela; i++) {
         const index = (indiceAtual + i) % imagens.length;
-        const imgInfo =imagens[index];
-        const img = document.createElement("img");
+        const imagemElementInfo =imagens[index];
+        const imagemElement = document.createElement("imagemElement");
 
-        img.src = imgInfo.scr;
-        img.alt = imgInfo.titulo || "imagens Sem Título"; 
-        img.title = imgInfo.descricao || "Clique para abrir detalhes."; 
+        imagemElement.src = imagemElementInfo.scr;
+        imagemElement.alt = imagemElementInfo.titulo || "imagens Sem Título"; 
+        imagemElement.title = imagemElementInfo.descricao || "Clique para abrir detalhes."; 
 
-        img.onclick = function()
+        imagemElement.onclick = function()
         {
             // 1. VERIFICAÇÃO DE LINK EXTERNO (ABRIR NA MESMA PÁGINA)
-            if (imgInfo.linkExterno) {
+            if (imagemElementInfo.linkExterno) {
                 // REDIRECIONA PARA O NOVO ARQUIVO NA MESMA ABA
-                window.location.href = imgInfo.linkExterno;
+                window.location.href = imagemElementInfo.linkExterno;
                 return; // Para a execução
             }
 
@@ -80,15 +80,15 @@ function exibirImagens() {
                 popup.document.write(`
                     <html>
                         <head>
-                            <title>${imgInfo.titulo}</title>
+                            <title>${imagemElementInfo.titulo}</title>
                             <style>
                             body{
                             font-family: Arial, sans-serif;
                             padding: 20px;
                             }
-                            img{
-                            width: ${imgInfo.largura};
-                            height: ${imgInfo.altura};
+                            imagemElement{
+                            width: ${imagemElementInfo.largura};
+                            height: ${imagemElementInfo.altura};
                             border-radius: 8px;
                             display:block;
                             margin-bottom: 15px;
@@ -102,10 +102,10 @@ function exibirImagens() {
                             </style>
                         </head>
                         <body>
-                        <h1>${imgInfo.titulo}</h1>
-                        <div class="info"><strong>Data de criação:</strong> ${imgInfo.data}</div>
-                        <img src="${imgInfo.scr}" alt="${imgInfo.titulo}">
-                        <p><strong>Descrição:</strong> ${imgInfo.descricao}</p>
+                        <h1>${imagemElementInfo.titulo}</h1>
+                        <div class="info"><strong>Data de criação:</strong> ${imagemElementInfo.data}</div>
+                        <imagemElement src="${imagemElementInfo.scr}" alt="${imagemElementInfo.titulo}">
+                        <p><strong>Descrição:</strong> ${imagemElementInfo.descricao}</p>
                         </body>
                     </html>
                 `)
@@ -115,7 +115,7 @@ function exibirImagens() {
                 alert("Por favor, permita pop-ups para visualizar as informações.");
             }
         };
-        container.appendChild(img);
+        container.appendChild(imagemElement);
     }
 }
 
