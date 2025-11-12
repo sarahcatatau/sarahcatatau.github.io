@@ -1,11 +1,11 @@
 const tela = document.querySelector('canvas');
 const pincel = tela.getContext('2d');
 
-var abelha= new Abelha(350,550,100,100,"img/bee1.png");
-var aranha = new Aranha(100,100,100,100,"img/spider1.png");
-var flor = new Flor(0,0,50,50, "img/flower1.png");
-var bg = new Bg(0,0,900,720,"img/bg.png");
-var bg2 = new Bg(0,-720,900,720,"img/bg.png");
+var abelha= new Abelha(350,550,100,100,"imagens/bee1.png");
+var aranha = new Aranha(100,100,100,100,"imagens/spider1.png");
+var flor = new Flor(0,0,50,50, "imagens/flower1.png");
+var bg = new Bg(0,0,900,720,"imagens/bg.png");
+var bg2 = new Bg(0,-720,900,720,"imagens/bg.png");
 
 var florescont = new Text();
 var placar = new Text();
