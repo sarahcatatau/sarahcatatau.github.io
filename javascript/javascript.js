@@ -15,35 +15,35 @@ function mudarFonte(fonte) {
 }
 
 const imagens = [
-    {scr:"imagem/1.png",
+    {scr:"imagens/1.png",
         titulo: "Modelagem 3d- Haruki Ren",
         data: "04/2025 - Em desenvolvimento",
         descricao: "Haruki é o protagonista do jogo Martial Spirit, modelado em 3D no Blender com estilo low poly inspirado em Tunic. Representa um jovem asiático introspectivo de 14 anos, vestindo uma camiseta vermelha vibrante e calças pretas, refletindo coragem, disciplina e simplicidade. Seu modelo já conta com animações básicas como caminhada e idle, com planos futuros para golpes de Karate-Do. Haruki simboliza crescimento e superação, sendo um elo visual e emocional entre jogador e narrativa.",
         largura: "250px",
         altura:"auto",
     },
-    { scr:"imagem/2.png",
+    { scr:"imagens/2.png",
         titulo: "Martial Spirit - Jogo",
         data:"04/2025 - Em andamento",
         descricao: "Martial Spirit conta a jornada de Haruki, um garoto de 14 anos que enfrenta bullying e insegurança em sua vila. Após encontrar um livro sobre o Caminho do Guerreiro, ele busca superação por meio do Karate-Do. Treinando no Dojo Seishin, aprende que a verdadeira força está no respeito e no autocontrole. Sua maior conquista é enfrentar desafios internos e externos sem violência, evoluindo como pessoa. No projeto do jogo, sou responsável pela modelagem e animação dos personagens, junto a uma equipe de programadores e modeladores.",
         largura: "250px",
         altura: "auto",
     },
-    {scr:"imagem/3.png",
+    {scr:"imagens/3.png",
         titulo:"Colapso Cósmico - Jogo",
         data: "11/2024 - 01/2025",
         descricao: "Colapso Cósmico acompanha a nave Aurora, enviada para abastecer a colônia humana em Nova Terra. Após ser atingida por um meteoro, a nave sofre danos críticos, deixando a maioria da tripulação morta ou ferida. O jogador controla o Capitão Alex Torres, único capaz de salvar a missão. Com o oxigênio acabando e sistemas falhando, ele precisa resolver puzzles, restaurar os sistemas e salvar os sobreviventes. O objetivo é estabilizar a nave e garantir o pouso seguro antes da destruição total.",
         largura: "250px",
         altura:"auto",
         },
-    {scr:"imagem/4.png",
+    {scr:"imagens/4.png",
         titulo:"Autoscópio - Jogo",
-        data:" 05/2024  -11/2024",
+        data:" 05/2024 -11/2024",
         descricao:"Autoscópio é um jogo 3D em primeira pessoa que propõe uma jornada introspectiva baseada nas memórias e personalidade do desenvolvedor. Dividido em três fases simbólicas, o jogador explora ambientes repletos de enigmas e significados pessoais. Cada fase representa uma etapa do autoconhecimento, desde a busca por sentido até a tomada de decisões conscientes. A experiência convida o jogador a compreender o criador e, indiretamente, a si mesmo. Mais que um jogo, Autoscópio é um espelho narrativo interativo.",
         largura:"250px",
         altura:"auto",
     },
-    {scr:"imagem/5.png",
+    {scr:"imagens/5.png",
         titulo: "Link para o Menu Principal", 
         linkExterno: "menu.html" // Atualizado o nome do arquivo
     }
@@ -62,7 +62,7 @@ function exibirImagens() {
         const img = document.createElement("img");
 
         img.src = imgInfo.scr;
-        img.alt = imgInfo.titulo || "Imagem Sem Título"; 
+        img.alt = imgInfo.titulo || "imagens Sem Título"; 
         img.title = imgInfo.descricao || "Clique para abrir detalhes."; 
 
         img.onclick = function()
