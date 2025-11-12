@@ -65,7 +65,7 @@ function exibirImagens() {
         imgElement.alt = imgInfo.titulo || "imagens Sem Título"; 
         imgElement.title = imgInfo.descricao || "Clique para abrir detalhes."; 
 
-        img.onclick = function()
+        imgElement.onclick = function()
         {
             // 1. VERIFICAÇÃO DE LINK EXTERNO (ABRIR NA MESMA PÁGINA)
             if (imgInfo.linkExterno) {
