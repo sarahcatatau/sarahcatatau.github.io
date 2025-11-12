@@ -38,7 +38,7 @@ const imagens = [
         },
     {scr:"imagens/4.png",
         titulo:"Autoscópio - Jogo",
-        data:" 05/2024 -11/2024",
+        data:" 05/2024  -11/2024",
         descricao:"Autoscópio é um jogo 3D em primeira pessoa que propõe uma jornada introspectiva baseada nas memórias e personalidade do desenvolvedor. Dividido em três fases simbólicas, o jogador explora ambientes repletos de enigmas e significados pessoais. Cada fase representa uma etapa do autoconhecimento, desde a busca por sentido até a tomada de decisões conscientes. A experiência convida o jogador a compreender o criador e, indiretamente, a si mesmo. Mais que um jogo, Autoscópio é um espelho narrativo interativo.",
         largura:"250px",
         altura:"auto",
@@ -59,13 +59,13 @@ function exibirImagens() {
     for (let i = 0; i < imagensPorTela; i++) {
         const index = (indiceAtual + i) % imagens.length;
         const imgInfo =imagens[index];
-        const imagens = document.createElement("imagens");
+        const img = document.createElement("img");
 
-        imagens.src = imgInfo.scr;
-        imagens.alt = imgInfo.titulo || "imagens Sem Título"; 
-        imagens.title = imgInfo.descricao || "Clique para abrir detalhes."; 
+        img.src = imgInfo.scr;
+        img.alt = imgInfo.titulo || "imagens Sem Título"; 
+        img.title = imgInfo.descricao || "Clique para abrir detalhes."; 
 
-        imagens.onclick = function()
+        img.onclick = function()
         {
             // 1. VERIFICAÇÃO DE LINK EXTERNO (ABRIR NA MESMA PÁGINA)
             if (imgInfo.linkExterno) {
@@ -86,7 +86,7 @@ function exibirImagens() {
                             font-family: Arial, sans-serif;
                             padding: 20px;
                             }
-                            imagens{
+                            img{
                             width: ${imgInfo.largura};
                             height: ${imgInfo.altura};
                             border-radius: 8px;
@@ -104,7 +104,7 @@ function exibirImagens() {
                         <body>
                         <h1>${imgInfo.titulo}</h1>
                         <div class="info"><strong>Data de criação:</strong> ${imgInfo.data}</div>
-                        <imagens src="${imgInfo.scr}" alt="${imgInfo.titulo}">
+                        <img src="${imgInfo.scr}" alt="${imgInfo.titulo}">
                         <p><strong>Descrição:</strong> ${imgInfo.descricao}</p>
                         </body>
                     </html>
@@ -115,7 +115,7 @@ function exibirImagens() {
                 alert("Por favor, permita pop-ups para visualizar as informações.");
             }
         };
-        container.appendChild(imagens);
+        container.appendChild(img);
     }
 }
 
