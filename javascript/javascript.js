@@ -125,4 +125,5 @@ function mudarImagens(direcao) {
 }
 
 // Inicializar carrossel ao carregar a página
+
 document.addEventListener("DOMContentLoaded", exibirImagens)
