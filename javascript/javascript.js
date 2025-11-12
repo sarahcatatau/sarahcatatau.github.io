@@ -59,13 +59,13 @@ function exibirImagens() {
     for (let i = 0; i < imagensPorTela; i++) {
         const index = (indiceAtual + i) % imagens.length;
         const imgInfo =imagens[index];
-        const img = document.createElement("img");
+        const imagens = document.createElement("imagens");
 
-        img.src = imgInfo.scr;
-        img.alt = imgInfo.titulo || "imagens Sem Título"; 
-        img.title = imgInfo.descricao || "Clique para abrir detalhes."; 
+        imagens.src = imgInfo.scr;
+        imagens.alt = imgInfo.titulo || "imagens Sem Título"; 
+        imagens.title = imgInfo.descricao || "Clique para abrir detalhes."; 
 
-        img.onclick = function()
+        imagens.onclick = function()
         {
             // 1. VERIFICAÇÃO DE LINK EXTERNO (ABRIR NA MESMA PÁGINA)
             if (imgInfo.linkExterno) {
@@ -86,7 +86,7 @@ function exibirImagens() {
                             font-family: Arial, sans-serif;
                             padding: 20px;
                             }
-                            img{
+                            imagens{
                             width: ${imgInfo.largura};
                             height: ${imgInfo.altura};
                             border-radius: 8px;
@@ -104,7 +104,7 @@ function exibirImagens() {
                         <body>
                         <h1>${imgInfo.titulo}</h1>
                         <div class="info"><strong>Data de criação:</strong> ${imgInfo.data}</div>
-                        <img src="${imgInfo.scr}" alt="${imgInfo.titulo}">
+                        <imagens src="${imgInfo.scr}" alt="${imgInfo.titulo}">
                         <p><strong>Descrição:</strong> ${imgInfo.descricao}</p>
                         </body>
                     </html>
@@ -115,7 +115,7 @@ function exibirImagens() {
                 alert("Por favor, permita pop-ups para visualizar as informações.");
             }
         };
-        container.appendChild(img);
+        container.appendChild(imagens);
     }
 }
 
